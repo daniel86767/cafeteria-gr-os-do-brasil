@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="bem-vindo a grão do brasil melhor café da região">
+    <title>grãos do brasil</title>
+    <!--CSS-->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!--FAVICON-->
+    <link rel="shortcut icon" href="./assets/img/logo.svg" type="image/x-icon">
+    <!--FONTES-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!--HEADER-->
+    <header class="header active">
+        <div class="container">
+            <a href="#"><img src="./assets/img/logo.svg" alt="logo " class="logo"></a>
+
+            <!--MENU-->
+            <nav class="navbar active">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">cafés</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">chás</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">doces</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">salgados</a>
+                    </li>
+
+                    <!--DROPDOWN-->
+                    <li class="dropdown-item">
+                        <div class="nav-link dropdown-toggle" data-dropdown-toggle>
+                            sobre nós<ion-icon name="chevron-down-outline"></ion-icon>
+                        </div>
+
+
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">nossos café</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Contatos</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <a href="#" class="btn">Login</a>
+
+            <button class="search-btn" id="searchToggle" aria-label="Buscar">
+                <ion-icon name="search-outline"></ion-icon>
+            </button>
+
+            <button class="nav-toggle-btn" aria-label="menu mobile">
+                <ion-icon name="grid-outline"></ion-icon>
+            </button>
+        </div>
+    </header>
+
+    <!--BANNER-->
+    <section class="banner">
+        <video autoplay muted loop>
+            <source src="./assets/videos/3044454-uhd_3840_2160_25fps.mp4"/>
+        </video>
+    </section>
+
+    <!--SCRIPT-->
+    <script src="./assets/script/script.js"></script>
+
+    <!--IONICONS-->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

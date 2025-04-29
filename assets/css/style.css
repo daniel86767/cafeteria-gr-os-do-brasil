@@ -1,0 +1,328 @@
+:root {
+  /*==== CORES ====*/
+  --terra: hsl(32, 76%, 8%);
+  --neon-purple: hsl(348, 85%, 54%);
+  --yellow:hsl(41, 77%, 60%);
+  --purple: hsl(298, 57%, 25%);
+  --platinum: hsl(230, 7%, 84%);
+  --white: #ffffff;
+  --Chocolate1:#FF7F24;
+  --Chocolate2:#EE7621;
+ --Chocolate3:#CD661D;
+ --Chocolate4:#8B4513;
+  --Sienna1:#FF8247;
+  --Sienna2:#EE7942;
+  --Sienna3:#CD6839;
+  --Sienna4:#8B4726;
+  --DarkOrange1:#FF7F00;
+
+  /*==== GRADIENTES ====*/
+  --gradient1: linear-gradient(
+    to right bottom,
+    hsl(49, 74%, 20%),
+    hsl(305, 48%, 43%),
+    hsl(273, 100%, 17%)
+  );
+
+  --gradient2: linear-gradient(
+    to right bottom,
+    hsl(332, 100%, 95%),
+    hsl(295, 100%, 63%),
+    hsl(261, 100%, 57%)
+  );
+
+  --gradient3: linear-gradient(
+    hsl(261, 100%, 57%),
+    hsl(251, 100%, 24%),
+    hsl(241, 100%, 9%)
+  );
+
+  /*==== tipografia ====*/
+  --ff-open-sans: "Open Sans", sans-serif;
+  --ff-arquivo: 'Archivo', sans-serif;
+   
+
+  /*==== Tamanho da fonte ====*/
+  --fs-1: 3.6rem;
+  --fs-2: 2.4rem;
+  --fs-3: 2rem;
+  --fs-4: 1.7rem;
+  --fs-5: 1.6rem;
+  --fs-6: 1.5rem;
+  --fs-7: 1.4rem;
+  --fs-8: 1.2rem;
+
+  /*==== negrito ====*/
+  --weight-regular: 400;
+  --weight-semiBold: 600;
+  --weight-bold: 700;
+
+  /*==== espaçamento ====*/
+  --section-padding: 60px;
+
+  /*==== border radius ====*/
+  --radius-circle: 50%;
+  --radius-5: 5px;
+  --radius-3: 3px;
+
+  /*==== borda ====*/
+  --border: #fff;
+  --border-30: hsl(332, 100%, 95%, 0.5);
+
+  /*==== sombra ====*/
+  --shadow: 0 0 20px hsl(273, 100%, 17%, 0.8); /*horizontal/vertical/desfoque/espelhamento*/
+
+  /*==== transição ====*/
+  --transition-1: 250ms ease;
+  --transition-2: 500ms ease;
+  --cubic-out: cubic-bezier(0.05, 0.83, 0.52, 0.97);
+
+  /*==== clip path ====*/
+  --clip-path-1: polygon(0 0, 100% 0, 100% 0, 0 0);
+  --clip-path-2: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  --clip-path-3: polygon(0% 0%, 90% 0, 100% 30%, 100% 100%, 0 100%);
+  --clip-path-4: polygon(90% 0, 100% 40%, 100% 100%, 0 100%, 0 0);
+  --clip-path-5: polygon(100% 0, 100% 100%, 10% 100%, 0 60%, 0 0);
+  --clip-path-6: polygon(10% 0, 100% 0, 100% 100%, 0 100%, 0 40%);
+  --clip-path-7: polygon(100% 0, 100% 60%, 90% 100%, 0 100%, 0 0);
+  --clip-path-8: polygon(0% 0%, 70% 0, 100% 30%, 100% 100%, 0 100%);
+  --clip-path-9: polygon(0 0, 90% 0, 100% 100%, 0% 100%);
+}
+
+/*-----------------------------------*\
+  #RESET
+\*-----------------------------------*/
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+
+a,
+img,
+span,
+input,
+button,
+textarea,
+ion-icon {
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  height: auto;
+}
+
+input,
+button,
+textarea {
+  background: none;
+  border: none;
+  font: inherit; /*herda da div pai*/
+}
+
+input,
+textarea {
+  width: 100%;
+}
+
+ion-icon {
+  pointer-events: none;
+}
+
+address {
+  font-size: 10px;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--white);
+  color: var(--white);
+  font-family: var(--Chocolate3);
+  font-size: 2rem;
+  font-weight: var(--weight-regular);
+  line-height: 1.6;
+  overflow-x: hidden;
+  height: 10000px; /*apenas para mostrar a barra de rolagem*/
+}
+
+:focus-visible {
+  outline-offset: 4px;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: hsl(0, 0%, 95%);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--Sienna3);
+  border-radius: 5px;
+}
+
+/*-----ESTILO REUTILIZÁVEL-----*/
+.container{
+  max-width:  12000px;
+  margin: 0 auto;
+  display: flex;
+  justify-self: center;
+  place-items: center;
+  gap: 9rem;
+}
+
+.btn{
+  position: relative;
+  background: var(--Chocolate1);
+  height: 50px;
+  display: grid;
+  place-items: center;
+  padding-inline: 30px;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.btn:hover{
+  color: var(--Chocolate4);
+  transform: scale(1.05);
+}
+
+.search-btn{
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: var(--fs-3);
+  color: var(--purple);
+  margin-left: 1rem;
+  transition: transform 0.2s ease, color 0.3s ease;
+}
+
+.search-btn:hover{
+  transform: scale(1.2);
+  color: var(--Chocolate4);
+}
+
+/*-----HEADER-----*/
+header{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: var(--yellow);
+  padding: 10px 20px;
+  z-index: 4;
+  box-shadow: var(--shadow);
+}
+
+.header.active {
+  position: fixed;
+  animation: slideUp 1s ease forwards;
+}
+
+@keyframes slideUp{
+  0%  {
+    transform: translateY(-100);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.logo{
+  width: 120px;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  left: 0px;
+  position: relative;
+}
+
+.nav-list{
+  display: flex;
+  justify-content: center;
+  gap: 3.5rem;
+  text-align: center;
+}
+
+.nav-link{
+  transition: 0.3s;
+}
+
+.nav-link:hover{
+  color: var(--Chocolate4)
+ 
+}
+
+.nav-toggle-btn{
+  display: none;
+}
+
+.navbar,
+.navbar.active {
+  all: unset;
+  display: block;
+}
+
+/*-----DROPDOWN-----*/
+.dropdown-toggle{
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.dropdown-item{
+  position: relative;
+}
+
+.dropdown-menu{
+  display: none;
+  position: absolute;
+  top: 120%;
+  left: 0;
+  background-color: var(--purple);
+  box-shadow: 0 5px 10px hsl(39, 94%, 40%);
+  border-radius: 10px;
+  min-width: 150px;
+  padding: 0.5rem 0;
+  z-index: 10;
+  flex-direction: column;
+}
+
+.dropdown-link{
+  padding: 0.8rem 1.2rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.5px;
+  transition: background 0.3s, color 0.3s;
+}
+
+.dropdown-link:hover{
+  background: var(--gradient1);
+  color: var(--Chocolate1);
+}
+
+.dropdown-item.active .dropdown-menu{
+  display: flex;
+}
+
+/*-----BANNER-----*/
+.banner video{
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+}
