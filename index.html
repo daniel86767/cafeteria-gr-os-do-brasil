@@ -40,35 +40,57 @@
                         <a href="#" class="nav-link">doces</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link">salgados</a>
+                        <a href="#cardápio" class="nav-link">cardápio</a>
                     </li>
 
                     <!--DROPDOWN-->
                     <li class="dropdown-item">
-                        <div class="nav-link dropdown-toggle" data-dropdown-toggle>
-                            sobre nós<ion-icon name="chevron-down-outline"></ion-icon>
+                        <div class="navbar-link dropdown-toggle" data-dropdown-toggle>
+                            serviços <ion-icon  name="chevron-down-outline"></ion-icon>
                         </div>
 
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="#" class="dropdown-link">delivery</a>
+                            </li>
 
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">nossos café</a>
-                    </li>
+                            <li>
+                                <a href="#" class="dropdown-link">musica ao vivo</a>
+                            </li>
 
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">Contatos</a>
+                            <li>
+                                <a href="#" class="dropdown-link">livraria</a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="dropdown-link">kits presentes</a>
+                            </li>
+                        </ul>
                     </li>
                 </ul>
             </nav>
-
             <a href="#" class="btn">Login</a>
 
+             <!--batão de busca-->
             <button class="search-btn" id="searchToggle" aria-label="Buscar">
                 <ion-icon name="search-outline"></ion-icon>
             </button>
 
-            <button class="nav-toggle-btn" aria-label="menu mobile">
-                <ion-icon name="grid-outline"></ion-icon>
+                 <!-- Overlay da busca -->
+         <div class="search-overlay" id="searchOverlay">
+            <button class="close-btn" id="closeSearch" aria-label="Fechar busca">
+                <ion-icon name="close-outline"></ion-icon>
             </button>
+            <div class="search-container">
+                <input
+                type="text"
+                placeholder="O que você está procurando?"
+                class="search-input"
+                autofocus
+                />
+            </div>
+        </div>
+
         </div>
     </header>
 
@@ -78,6 +100,61 @@
             <source src="./assets/videos/3044454-uhd_3840_2160_25fps.mp4"/>
         </video>
     </section>
+
+   <!--galeria de imagens-->
+    <section class="section gallery">
+        <div class ="container-galeria">
+            <p class="section-subtitle text-center">nossos produtos</p>
+
+        <h2 class="h2 text-center">confira o trabalho da nossa cafeteria</h2>
+    </div>
+        <div class="galeria">
+        <img src="./assets/img/Café aromatizado05.jpg" alt="foto 1">
+        <img src="./assets/img/chá06.jpg" alt="foto 2">
+        <img src="./assets/img/Café com leite04.jpg" alt="foto 3">
+        <img src="./assets/img/cappuccino03.jpg" alt="foto 4">
+        </div>
+ 
+        <div class="botão-ver-mais" >
+            <a href="#" class="btn-ver-mais">
+                <ion-icon name="chevron-forward-outline"></ion-icon>
+            </a>
+        </div>
+
+        <!--ligntbox-->
+    <div class="lightbox" id="lightbox">
+    <img src="" alt="imagem ampliada" id="ligntbox-img">
+    </div>
+    </section>
+
+      <!--cardápio-->
+        <section class="section service" aria-label="service">
+        <div class="container-serv">
+            <p class="section-subtitle text-center">nossos produtos</p>
+            <h2 class="h2 section-title text-center">confira o trabalho da nossa cafeteria</h2>
+
+            <ul class="service-list">
+                <li>
+                    <div class="service-card">
+                    <div class="card-icon">
+                        <img src="" alt="" class="w-100"/>
+                    </div>
+                 </div>
+
+                     <div>
+                    <h3 class="h3 card-title">delivery</h3>
+                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatibus.</p>
+                </li>
+            </div>
+            </ul>
+
+        <!--img centro-->
+        <li class="service-banner">
+            <figure>
+            
+            <img src="" alt="" class="w-100">
+        </figure>
+        </li>
 
     <!--SCRIPT-->
     <script src="./assets/script/script.js"></script>
