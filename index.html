@@ -40,7 +40,7 @@
                         <a href="#" class="nav-link">doces</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#cardápio" class="nav-link">cardápio</a>
+                        <a href="#" class="nav-link">salgados</a>
                     </li>
 
                     <!--DROPDOWN-->
@@ -55,7 +55,7 @@
                             </li>
 
                             <li>
-                                <a href="#" class="dropdown-link">musica ao vivo</a>
+                                <a href="#" class="dropdown-link"> kits presentes</a>
                             </li>
 
                             <li>
@@ -63,7 +63,7 @@
                             </li>
 
                             <li>
-                                <a href="#" class="dropdown-link">kits presentes</a>
+                                <a href="#" class="dropdown-link">Música ao vivo</a>
                             </li>
                         </ul>
                     </li>
@@ -97,64 +97,159 @@
     <!--BANNER-->
     <section class="banner">
         <video autoplay muted loop>
-            <source src="./assets/videos/3044454-uhd_3840_2160_25fps.mp4"/>
+            <source src="./assets/videos/cafeteria.mp4"/>
         </video>
     </section>
 
-   <!--galeria de imagens-->
-    <section class="section gallery">
-        <div class ="container-galeria">
-            <p class="section-subtitle text-center">nossos produtos</p>
+       <!--Galeria de imagens--> 
 
-        <h2 class="h2 text-center">confira o trabalho da nossa cafeteria</h2>
+<section class="section gallery" id="pacotes">
+    <div class="container-galeria">
+        <p class="section-subtitle text-center">Confira os Nossos Serviços</p>
+        <h2 class="h2 text-center">Seu café do jeitinho que você gosta</h2>
     </div>
-        <div class="galeria">
-        <img src="./assets/img/Café aromatizado05.jpg" alt="foto 1">
-        <img src="./assets/img/chá06.jpg" alt="foto 2">
-        <img src="./assets/img/Café com leite04.jpg" alt="foto 3">
-        <img src="./assets/img/cappuccino03.jpg" alt="foto 4">
-        </div>
- 
-        <div class="botão-ver-mais" >
-            <a href="#" class="btn-ver-mais">
-                <ion-icon name="chevron-forward-outline"></ion-icon>
-            </a>
-        </div>
 
-        <!--ligntbox-->
+    <div class="galeria">
+        <img src="./assets/img/Café aromatizado05.jpg" alt="foto 1">
+        <img src="./assets/img/chás02.jpg" alt="foto 2" >
+        <img src="./assets/img/bolo.jpg" alt="foto 3">
+        <img src="./assets/img/salgados.jpg" alt="foto 4">
+    </div>
+
+    <div class="botao-ver-mais">
+        <a href="#"class="btn-ver-mais" title="Ver Galeria">
+            <ion-icon name="chevron-forward-outline"></ion-icon>
+        </a>
+    </div>
+
+    <!--LIGHTBOX-->
     <div class="lightbox" id="lightbox">
-    <img src="" alt="imagem ampliada" id="ligntbox-img">
+    <img src="" alt="imagem ampliada" id="lightbox-img"
     </div>
     </section>
 
-      <!--cardápio-->
-        <section class="section service" aria-label="service">
-        <div class="container-serv">
-            <p class="section-subtitle text-center">nossos produtos</p>
-            <h2 class="h2 section-title text-center">confira o trabalho da nossa cafeteria</h2>
+<!--Serviços-->
 
-            <ul class="service-list">
-                <li>
-                    <div class="service-card">
+<section class="section service" aria-label="service">
+    <div class="container-serv">
+        <p class="section-subtitle text-center">Nossos Serviços</p>
+        <h2 class="h2 section-title text-center">Descubra o que temos para encantar seu dia</h2>
+
+        <ul class="service-list">
+            <!--CARD 1-->
+            <li>
+                <div class="service-card">
                     <div class="card-icon">
-                        <img src="" alt="" class="w-100"/>
+                        <img src="./assets/img/delivery.jpg" alt="" class="w-100">
+                    </div>
+                
+
+                    <div>
+                        <h3 class="h3 card-title">delivery</h3>
+                        <p class="card-text">Seu café favorito, onde você estiver!
+                            Agora ficou ainda mais fácil saborear aquele café fresquinho, seus doces preferidos e nossos lanches artesanais sem sair de casa. Faça seu pedido pelo delivery e receba tudo com o mesmo carinho e qualidade de sempre. É só escolher, pedir e aproveitar! </p>
+                    </div>
+                </div>
+            </li>
+
+            <!--CARD 2-->
+
+            <li>
+                <div class="service-card">
+                    <div class="card-icon">
+                        <img src="./assets/img/musica ao vivo.jpg" alt="" class="w-100">
+                    </div>
+                
+
+                    <div>
+                        <h3 class="h3 card-title">musica ao vivo</h3>
+                        <p class="card-text"> Música ao vivo na nossa cafeteria  toda segunda e sexta! 
+                            Comece e termine a semana com o clima perfeito: café quentinho, ambiente acolhedor e música ao vivo para embalar seu momento. Toda segunda e sexta-feira, recebemos artistas locais que trazem leveza e boa energia ao nosso espaço. </p>
+                    </div>
+                </div>
+            </li>
+
+            <!--IMG CENTRO-->
+
+            <li>
+                <div class="service-banner">
+                    <figure>
+                        <img src="./assets/img/logo.svg" alt="" class="w-100">
+                    </figure>  
+            </li>
+
+         <!--CARD 3-->
+
+            <li>
+                <div class="service-card">
+                    <div class="card-icon">
+                        <img src="./assets/img/livraria.jpg" alt="" class="w-100">
+                    </div>
+                
+
+                    <div>
+                        <h3 class="h3 card-title">livraria</h3>
+                        <p class="card-text">nossa Livraria é um espaço acolhedor onde o aroma dos livros se mistura ao cheiro do café fresquinho. Entre prateleiras repletas de histórias, os visitantes podem relaxar em poltronas confortáveis, saboreando uma bebida enquanto se perdem nas páginas de um bom livro. Um lugar perfeito para quem ama leitura e bons momentos. </p>
+                    </div>
+                </div>
+            </li>
+
+            
+         <!--CARD 4-->
+
+            <li>
+                <div class="service-card">
+                    <div class="card-icon">
+                        <img src="./assets/img/kits presentes.jpg" alt="" class="w-100">
+                    </div>
+                
+
+                    <div>
+                        <h3 class="h3 card-title">kits presentes</h3>
+                        <p class="card-text">Os kits presentes de beleza são verdadeiros convites ao cuidado e ao bem-estar. Com produtos selecionados para valorizar a autoestima, eles oferecem uma experiência completa de cuidado pessoal, perfeita para mimar quem você ama com estilo e carinho. </p>
+                    </div>
+                </div>
+            </li>
+
+            <!--Login-->
+            <section class="container-login">
+                <div class="wrapper">
+                    <div class="form-box login"><h2>Login</h2>
+                    <form action="#">
+                        <div class="input-box">
+                            <input type="text" required>
+                            <label>Usuário</label>
+                            <ion-icon name="person"></ion-icon>
+                        </div>
+                    
+                        <div class="input-box">
+                            <input type="text" required>
+                            <label>Senha</label>
+                            <ion-icon name="lock-closed"></ion-icon>
+                        </div>
+        
+                        <button type="submit" class="btn btn-login">entrar</button>
+        
+                        <div class="logreg-link">
+                            <p>
+                                Não possui uma conta? 
+                                <a href="#" class="register-link" > Clique aqui</a>
+                            </p>
+                        </div>
+        
+        
+                        </form>
                     </div>
                  </div>
-
-                     <div>
-                    <h3 class="h3 card-title">delivery</h3>
-                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatibus.</p>
-                </li>
-            </div>
-            </ul>
-
-        <!--img centro-->
-        <li class="service-banner">
-            <figure>
-            
-            <img src="" alt="" class="w-100">
-        </figure>
-        </li>
+            </section>
+        
+              </ul>
+          </div>
+        </section>
+        
+        </ul>
+    </div>
+</section>
 
     <!--SCRIPT-->
     <script src="./assets/script/script.js"></script>
