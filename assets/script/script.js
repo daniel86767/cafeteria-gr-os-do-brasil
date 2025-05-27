@@ -39,36 +39,46 @@ header.style.background = 'none';
 
 
 //fechar o botão de pesquisa
-closeSearch.addEventListener('click', () => {
-searchOverlay.style.display = 'none';
+  closeSearch.addEventListener('click', () => {
+    searchOverlay.style.display = 'none';
 })
 
-closeSearch.addEventListener('click', () => {
+  closeSearch.addEventListener('click', () => {
 header.style.backgroundColor = 'hsl(41, 77%, 60%)';
 })
 
 //fechar com o esc
 
 document.addEventListener('keydown', (e) => {
-if (e.key === 'Escape') {
+  if (e.key === 'Escape') {
   searchOverlay.style.display = 'none';
 }
 })
 
 //galeria
 
-const imagens = document.querySelectorAll(".galeria img");
-const lightbox = document.getElementById("lightbox");
-const lightboxImg = document.getElementById("lightbox-img");
+  const imagens = document.querySelectorAll(".galeria img");
+    const lightbox = document.getElementById("lightbox");
+      const lightboxImg = document.getElementById("lightbox-img");
 
 
 imagens.forEach((img)=> {
-img.addEventListener("click", () => {
-  lightboxImg.src = img.src;
-  lightbox.classList.add("show");
+  img.addEventListener("click", () => {
+    lightboxImg.src = img.src;
+      lightbox.classList.add("show");
 })
 })
 
-lightbox.addEventListener("click",() => {
-lightbox.classList.remove("show");
+  lightbox.addEventListener("click",() => {
+    lightbox.classList.remove("show");
 })
+
+//login
+const wrapper = document.querySelector('.wrapper');
+const registerLink = document.querySelector('.registrer-link');
+const loginLink = document.querySelector('.login-link');
+
+registerLink.onclick = (e) => {
+  e.preventDefault();
+  wrapper.classList.add('active');
+};

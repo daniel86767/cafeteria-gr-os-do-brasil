@@ -537,8 +537,8 @@ transition: transform 0.3s ease;
 /*serviços*/
 .service-banner{
   display: block;
-  grid-column: 3 / 3;
-  grid-row: 1 / 3;
+  grid-column: 2 / 3;
+  grid-row: 1 / 4;
   align-self: center;
 }
 
@@ -616,21 +616,32 @@ text-align: relative;
 }
 
 /*login*/
-
 .container-login{
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
   margin: 0 auto;
+  background-color: var(--Chocolate1);
+  /*abrir em tela cheia*/
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: none;
+  z-index: 1000;
 }
-
+.container-login.active{
+  display: flex;
+}
 .wrapper{
   position: relative;
   width: 750px;
   height: 450px;
   background-color: transparent;
   border:  3px solid var(--white);
+  overflow: hidden;
 }
 
 .wrapper .form-box{
@@ -640,7 +651,7 @@ text-align: relative;
   display: flex;
   flex-direction: column ;
   justify-content: center;
-  background-color: var(--Chocolate4);
+ 
 }
 
 .form-box h2{
@@ -664,6 +675,102 @@ text-align: relative;
   border-bottom: 2px solid var(--white-color);
   color: var(--white);
   font-size: 14px;
+  pointer-events: none;
+  padding-right: 23px;
+}
+
+.input-box label{
+  position: absolute;
+  top: 50%;
+  left: 0;
+  font-size: 14px;
+  color: var(--white-color);
+  transform: translateY(-50%);
+  transition: 0.5s;
+  pointer-events: none;
+}
+
+.input-box ion-icon{
+  position: absolute;
+  top: 50%;
+  right: 0;
+  font-size: 16px;
+  color: var(--white-color);
+  transform: translateY(-50%);
+  transition: 0.5s;
+}
+
+.btn-login{
+  width: 100%;
+  margin-top: 30px;
+}
+
+.btn:hover{
+  transform: scale(1.05) !important;
+}
+
+.form-box .logreg-link{
+  font-size: 14px;
+  color:var(black);
+  text-align: center;
+  margin-top: 20px 0 10px;
+}
+
+.logreg-link {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--white-color);
+  flex-wrap: wrap;
+}
+
+
+.logreg-link p{
+  margin: 0;
+  color: var(--white-color);
+  font-weight: var(--weight-regular);
+}
+
+.logreg-link p a{
+  color: var(--white-color);
+  text-decoration: none;
+  font-weight: var(--weight-semiBold);
+}
+
+.logreg-link p a:hover{
+  text-decoration: underline;
+}
+
+.wrapper .form-box.login{
+  left: 0;
+  padding: 0 60px 0 40px;
+  display: flex;
+}
+
+.input-box input:focus ~ label
+.input-box input:valid ~ label{
+  top: -5px;
+  color:var(--platinum);
+  font-size: 12px;
+}
+
+.input-box input:focus ~ ion-icon,
+.input-box input:valid ~ ion-icon{
+  top: -5px;
+  color: var(--Amarelo-Chá);
+
+}
+
+.wrapper  .info-text{
+  position:absolute;
+  top: 0;
+  width: 50%;
+  height: 100%;
+
+  background-color: #CD661D;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .input-box label{
@@ -674,6 +781,7 @@ text-align: relative;
   color: var(--white);
   transform: translateY(-50%);
   transition: 0.5s;
+  pointer-events: none;
 }
 
 .input-box ion-icon{
@@ -685,3 +793,104 @@ text-align: relative;
   transform: translateY(-50%);
   transition: 0.5s;
 }
+
+.about-content .btn{
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 50px;
+  max-width: 180px;
+}
+
+.efeito{
+  --webkit-mask-image: linear-gradient(to bottom, black 90%, transparent 100%);
+  mask-image: linear-gradient(to bottom, black 90%, transparent 100%);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+}
+
+.wrapper .info-text{
+  position: absolute;
+  top: 0;
+  width: 50%;
+  height: 100%;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: center;
+}
+
+
+.info-text h2{
+  font-size: 32px;
+  color: var(--Chocolate4);
+  text-align: center;
+  line-height: 1.3;
+  text-transform: uppercase;
+}
+
+.info-text p{
+  font-size: 16px;
+  color: var(--white-color);
+  text-align: center;
+  margin-top: 10px;
+}
+
+.wrapper .info-text.login{
+  right: 0;
+  text-align: right;
+  padding: 0 40px 0 60px;
+  display: none;
+}
+
+.wrapper .bg-animete{
+  position: absolute;
+  background-color: var(--begeclaro);
+  top:0;
+  right: 0;
+  width: 850px;
+  height: 600px;
+  /*transform: rotate(10deg) skewY(40deg);*/
+  transform: rotate(0deg) skewY(0deg);
+  transform-origin: bottom right;
+  border-bottom: 3px solid var(--Chocolate4);
+}
+
+.wrapper .bg-animete2{
+  position: absolute;
+  background-color: var(black);
+  top:100%;
+  left: 250px;
+  width: 850px;
+  height: 700px;
+  /*transform: rotate(10deg) skewY(40deg);*/
+  transform: rotate(-11deg) skewY(-41deg);
+  transform-origin: bottom right;
+  border-bottom: 3px solid var(--Chocolate4);
+}
+
+.wrapper .form-box.register{
+  right: 0;
+  padding: 0 40px 0 60px;
+}
+
+.wrapper .form-box .form-box.register{
+  display: none;
+  padding: 0 40px 0 60px;
+  right: 0;
+}
+
+.wrapper .form-box.register.active{
+ left: 0;
+ text-align: left;
+ padding: 0 140px 0 60px;
+
+}
+
+.wrapper .form-box.login .animation{
+  transform: translateX(-120);
+}
+
+.wrapper .form-box.login .animation{
+  transition: 0.7s ease;
+}
+
