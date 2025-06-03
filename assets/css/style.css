@@ -30,9 +30,9 @@
 
   --gradient2: linear-gradient(
     to right bottom,
-    hsl(332, 100%, 95%),
-    hsl(295, 100%, 63%),
-    hsl(261, 100%, 57%)
+    hsl(56, 100%, 50%),
+    hsl(39, 100%, 40%),
+    hsl(36, 100%, 50%)
   );
 
   --gradient3: linear-gradient(
@@ -162,6 +162,7 @@ body {
   height: 10000px; /*apenas para mostrar a barra de rolagem*/
 }
 
+
 :focus-visible {
   outline-offset: 4px;
 }
@@ -191,7 +192,7 @@ body {
 
 .btn{
   position: relative;
-  background: var(--Chocolate3);
+  background: var(--DarkOrange1);
   height: 50px;
   display: grid;
   place-items: center;
@@ -616,13 +617,14 @@ text-align: relative;
 }
 
 /*login*/
+
 .container-login{
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
   margin: 0 auto;
-  background-color: var(--Chocolate1);
+  background-color: rgba(0, 0, 0, 0.8);
   /*abrir em tela cheia*/
   position: fixed;
   top: 0;
@@ -632,31 +634,35 @@ text-align: relative;
   display: none;
   z-index: 1000;
 }
+
 .container-login.active{
   display: flex;
+
 }
+
 .wrapper{
   position: relative;
   width: 750px;
   height: 450px;
-  background-color: transparent;
-  border:  3px solid var(--white);
+  background-color: var(--Chocolate4);
+  border:  3px solid hsl(49, 82%, 42%);
   overflow: hidden;
 }
 
 .wrapper .form-box{
+  position: absolute;
   top: 0;
   width: 50%;
   height: 100%;
   display: flex;
-  flex-direction: column ;
+  flex-direction: column;
   justify-content: center;
- 
+
 }
 
 .form-box h2{
-  font-size: var(--fs-4);
-  color: var(--white-color);
+  font-size: var(--fs-2);
+  color: var(--Chocolate2);
   text-align: center;
 }
 
@@ -672,10 +678,9 @@ text-align: relative;
   height: 100%;
   outline: none;
   background: transparent;
-  border-bottom: 2px solid var(--white-color);
-  color: var(--white);
+  border-bottom: 2px solid var(--Sienna4);
+  color: var(--border);
   font-size: 14px;
-  pointer-events: none;
   padding-right: 23px;
 }
 
@@ -684,7 +689,7 @@ text-align: relative;
   top: 50%;
   left: 0;
   font-size: 14px;
-  color: var(--white-color);
+  color: var(--begeclaro);
   transform: translateY(-50%);
   transition: 0.5s;
   pointer-events: none;
@@ -695,7 +700,7 @@ text-align: relative;
   top: 50%;
   right: 0;
   font-size: 16px;
-  color: var(--white-color);
+  color: var(--Sienna4);
   transform: translateY(-50%);
   transition: 0.5s;
 }
@@ -710,31 +715,28 @@ text-align: relative;
 }
 
 .form-box .logreg-link{
-  font-size: 14px;
-  color:var(black);
+  font-size: 17px;
+  color: var(--white-color);
   text-align: center;
-  margin-top: 20px 0 10px;
+  margin: 20px 0 10px;
 }
 
-.logreg-link {
+.logreg-link{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.logreg-link p{
   display: flex;
   align-items: center;
   gap: 5px;
-  color: var(--white-color);
   flex-wrap: wrap;
 }
 
-
-.logreg-link p{
-  margin: 0;
-  color: var(--white-color);
-  font-weight: var(--weight-regular);
-}
-
-.logreg-link p a{
-  color: var(--white-color);
-  text-decoration: none;
-  font-weight: var(--weight-semiBold);
+.logreg-link p a {
+  color: var(--white);
+font-weight: var(--weight-bold);
 }
 
 .logreg-link p a:hover{
@@ -744,54 +746,70 @@ text-align: relative;
 .wrapper .form-box.login{
   left: 0;
   padding: 0 60px 0 40px;
-  display: flex;
 }
 
-.input-box input:focus ~ label
+.input-box input:focus ~ label,
 .input-box input:valid ~ label{
   top: -5px;
-  color:var(--platinum);
+  color: var(--white-color);
   font-size: 12px;
 }
 
 .input-box input:focus ~ ion-icon,
 .input-box input:valid ~ ion-icon{
   top: -5px;
-  color: var(--Amarelo-Chá);
+  color: var(--Sienna4);
 
 }
 
-.wrapper  .info-text{
-  position:absolute;
-  top: 0;
-  width: 50%;
-  height: 100%;
 
-  background-color: #CD661D;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+
+
+/*Sobreeeeeeeeeee*/
+
+.container-sobre{
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.input-box label{
-  position: absolute;
-  top: 50%;
-  left: 0;
-  font-size: 18px;
-  color: var(--white);
-  transform: translateY(-50%);
-  transition: 0.5s;
-  pointer-events: none;
+.about .container-sobre{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
 }
 
-.input-box ion-icon{
-  position: absolute;
-  top: 50%;
-  right: 0;
-  font-size: 16px;
-  color: var(#000);
-  transform: translateY(-50%);
-  transition: 0.5s;
+.section about{
+  padding-block:var(--section-padding) ;
+  background-color: var(--white-color);
+}
+
+.about-banner{
+  margin-block-end: 50px;
+  position: relative;
+  max-width: 500px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.about-banner img{
+  filter:contrast(1.2) brightness(0.9);
+  transition: filter 0.4s ease;
+}
+
+.about-banner img:hover{
+  filter:contrast(1.4) brightness(1.1);
+}
+
+.about.section-text-1{
+  margin-block: 25px 15px;
+  text-align: justify;
+}
+
+.about-content .section-subtitle{
+  color: var(--Chocolate3);
+  font-weight: var(--weight-semiBold);
+  text-align: center;
+  font-size: var(--fs-6);
 }
 
 .about-content .btn{
@@ -800,6 +818,7 @@ text-align: relative;
   margin-top: 50px;
   max-width: 180px;
 }
+
 
 .efeito{
   --webkit-mask-image: linear-gradient(to bottom, black 90%, transparent 100%);
@@ -819,13 +838,13 @@ text-align: relative;
  justify-content: center;
 }
 
-
 .info-text h2{
   font-size: 32px;
-  color: var(--Chocolate4);
+  color: var(--white-color);
   text-align: center;
   line-height: 1.3;
   text-transform: uppercase;
+  margin-bottom:10px;
 }
 
 .info-text p{
@@ -836,61 +855,78 @@ text-align: relative;
 }
 
 .wrapper .info-text.login{
-  right: 0;
-  text-align: right;
-  padding: 0 40px 0 60px;
-  display: none;
+right: 0;
+text-align: right;
+padding: 0 40px 0 100px;
+
 }
 
-.wrapper .bg-animete{
+.wrapper .bg-animate{
   position: absolute;
-  background-color: var(--begeclaro);
-  top:0;
+  background: var(--gradient2);
+  top: 0;
   right: 0;
-  width: 850px;
-  height: 600px;
-  /*transform: rotate(10deg) skewY(40deg);*/
-  transform: rotate(0deg) skewY(0deg);
+  width: 800px;
+  height: 620px;
+  transform: rotate(10deg) skewY(40deg);
   transform-origin: bottom right;
-  border-bottom: 3px solid var(--Chocolate4);
+  border-bottom: 3px solid var(--begeescuro);
 }
 
-.wrapper .bg-animete2{
+/*-----------------------------------*\
+  #Cadastro
+\*-----------------------------------*/
+
+.wrapper .bg-animate2{
   position: absolute;
-  background-color: var(black);
-  top:100%;
+  background: rgba(0, 0, 0, 0.7);
+  top: 100%;
   left: 250px;
-  width: 850px;
+  width: 800px;
   height: 700px;
-  /*transform: rotate(10deg) skewY(40deg);*/
-  transform: rotate(-11deg) skewY(-41deg);
-  transform-origin: bottom right;
-  border-bottom: 3px solid var(--Chocolate4);
+ /* transform: rotate(-11deg) skewY(-41deg);*/
+   transform: rotate(0deg) skewY(0deg);
+  transform-origin: bottom left;
+  border-top: 3px solid var(--begeescuro);
 }
+
 
 .wrapper .form-box.register{
   right: 0;
   padding: 0 40px 0 60px;
 }
 
-.wrapper .form-box .form-box.register{
-  display: none;
-  padding: 0 40px 0 60px;
+.wrapper .form-box.register{
   right: 0;
+  padding: 0 40px 0 60px;
+  display: none;
 }
 
-.wrapper .form-box.register.active{
- left: 0;
- text-align: left;
- padding: 0 140px 0 60px;
-
+.wrapper .info-text.register{
+  left: 0;
+  text-align: left;
+  padding: 0 140px 0 30px;
+  display: none;
 }
 
-.wrapper .form-box.login .animation{
-  transform: translateX(-120);
+.wrapper.active .form-box.login .animation{
+transform: translateX(-120%);
+transition-delay:calc(0.1s * var(--i)) ;
+
 }
 
 .wrapper .form-box.login .animation{
   transition: 0.7s ease;
+  transform: translateX(0);
+}
+
+.wrapper .info-text.login .animation{
+  transition: 0.7s ease;
+  transform: translateX(0);
+}
+
+.wrapper.active .info-text.login .animation{
+  transform: translateX(170%);
+  transition-delay:calc(0.1s * var(--i)) ;
 }
 

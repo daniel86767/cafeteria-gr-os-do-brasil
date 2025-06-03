@@ -75,10 +75,18 @@ imagens.forEach((img)=> {
 
 //login
 const wrapper = document.querySelector('.wrapper');
-const registerLink = document.querySelector('.registrer-link');
+const registerLink = document.querySelector('.register-link');
 const loginLink = document.querySelector('.login-link');
 
 registerLink.onclick = (e) => {
   e.preventDefault();
   wrapper.classList.add('active');
 };
+
+// Abrir o Login
+const openLoginBtn = document.getElementById('Openlogin')
+const containerLogin = document.querySelector('.container-login')
+
+openLoginBtn.addEventListener('click', () => {
+    containerLogin.classList.add('active');
+})
